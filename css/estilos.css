@@ -1,0 +1,191 @@
+/*------VARIABLES------*/
+/*------LISTAS------*/
+/*------MIXINS------*/
+.contenedor {
+  display: flex;
+  justify-content: center; }
+
+.contenedor1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center; }
+
+body {
+  background-color: #1338a6; }
+
+h1 {
+  color: white;
+  background-color: #537be8;
+  padding-left: 10px; }
+  h1:hover {
+    background-color: #ff5e01; }
+
+h2 {
+  color: white;
+  background-color: #537be8;
+  padding-left: 10px; }
+  h2:hover {
+    background-color: #ff5e01; }
+
+.btn {
+  margin-bottom: 8px;
+  margin-left: 8px;
+  border: none;
+  color: black;
+  padding: 14px 28px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #fb7f01;
+  border: 2px solid #ff9800; }
+  .btn:hover {
+    background-color: #ff5e01; }
+  .btn:active {
+    border-color: #ff5e01;
+    background-color: #fb7f01; }
+
+.seccion {
+  border: #fb7f01 solid 5px;
+  margin: 10px 0 10px 0;
+  background-color: #3965e2; }
+  .seccion p {
+    padding: 5px;
+    background-color: #3965e2;
+    color: white; }
+
+a:link {
+  color: white; }
+
+a:visited {
+  color: white; }
+
+header {
+  background-color: #3965e2;
+  position: sticky;
+  top: 0px;
+  z-index: 1; }
+  header img {
+    width: 150px;
+    height: 75px;
+    padding: 15px; }
+  header nav ul {
+    border-bottom: solid #fb7f01 5px;
+    border-top: solid #fb7f01 5px;
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center; }
+
+/*------Galeria------*/
+.galeria-grid {
+  width: 98%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 350px;
+  gap: 10px;
+  border: #fb7f01 solid 5px;
+  padding: 10px; }
+  .galeria-grid .galeria1 {
+    grid-column: span 2; }
+    .galeria-grid .galeria1 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .galeria-grid .galeria2 {
+    grid-row: span 2; }
+    .galeria-grid .galeria2 img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill; }
+  .galeria-grid .galeria3 {
+    grid-column: span 2; }
+    .galeria-grid .galeria3 img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill; }
+  .galeria-grid .galeria4 {
+    grid-column: span 2; }
+    .galeria-grid .galeria4 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .galeria-grid .galeria5 {
+    grid-row: span 2; }
+    .galeria-grid .galeria5 img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill; }
+  .galeria-grid .galeria6 {
+    grid-column: span 2; }
+    .galeria-grid .galeria6 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+
+/*------Productos------*/
+.productos .productos-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; }
+  .productos .productos-contenedor .cartas {
+    margin: 10px;
+    background-color: #3965e2;
+    border: 5px solid #fb7f01; }
+    .productos .productos-contenedor .cartas .card-body h5 {
+      padding: 5px;
+      color: white;
+      background-color: #537be8;
+      text-align: center; }
+    .productos .productos-contenedor .cartas .card-body .btn {
+      display: flex;
+      justify-content: center; }
+
+footer {
+  margin-top: 10px; }
+  footer h2 {
+    text-align: center; }
+  footer .casa-inicio {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; }
+    footer .casa-inicio a img {
+      width: 25px;
+      height: 25px; }
+  footer .redes-flex {
+    display: flex;
+    justify-content: center; }
+    footer .redes-flex div a .redes-css {
+      color: #001865;
+      padding: 5px; }
+      footer .redes-flex div a .redes-css:hover {
+        color: #fb7f01; }
+
+/* Media Query Mapa Sucursal Central en el index*/
+@media screen and (max-width: 625px) {
+  .seccion iframe {
+    width: 500px;
+    height: 300px; } }
+
+@media screen and (max-width: 540px) {
+  .seccion iframe {
+    width: 400px;
+    height: 300px; } }
+
+@media screen and (max-width: 430px) {
+  .seccion iframe {
+    width: 300px;
+    height: 300px; } }
+
+/* Media Query Galeria*/
+@media screen and (max-width: 470px) {
+  header {
+    flex-direction: column;
+    position: static; }
+    header nav ul {
+      flex-direction: column;
+      text-align: center; }
+  main .galeria-grid {
+    width: 90%;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-rows: 300px; } }

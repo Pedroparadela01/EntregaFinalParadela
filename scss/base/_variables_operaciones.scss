@@ -1,0 +1,39 @@
+/*------VARIABLES------*/
+$color-redes: rgb(0, 24, 101);
+
+
+
+/*------LISTAS------*/
+
+$colores:
+rgb(19, 56, 166), 
+rgb(255, 255, 255),    
+rgb(83, 123, 232),
+rgb(251, 127, 1);
+
+
+
+/*------MIXINS------*/
+
+
+@mixin flex2($flex, $justify) {
+    display: $flex;
+    justify-content: $justify;
+}
+
+.contenedor {
+    @include flex2(flex, center)
+}
+
+
+
+@mixin flex($flex, $flex-dir, $justify, $align) {
+    display: $flex;
+    flex-direction: $flex-dir;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+.contenedor1 {
+    @include flex(flex, row, space-evenly, center)
+}

@@ -1,0 +1,102 @@
+/*------Galeria------*/
+
+.galeria-grid {
+    width: 98%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 350px;
+    gap: 10px;
+    border: nth($colores,4) solid 5px;
+    padding: 10px;
+
+    .galeria1 {
+        grid-column: span 2;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .galeria2 {
+        grid-row: span 2;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    }
+
+    .galeria3 {
+        grid-column: span 2;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    }
+
+    .galeria4 {
+        grid-column: span 2;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .galeria5 {
+        grid-row: span 2;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    }
+
+    .galeria6 {
+        grid-column: span 2;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+/*------Productos------*/
+.productos {
+    .productos-contenedor {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        .cartas {
+            margin: 10px;
+            background-color: rgb(57, 101, 226);
+            border: 5px solid nth($colores,4);
+
+            .card-body {
+                h5 {
+                    padding: 5px;
+                    color: nth($colores,2);
+                    background-color: nth($colores,3);
+                    text-align: center;
+                }
+
+                .btn {
+                    @include flex2(flex, center);
+                }
+
+
+            }
+
+        }
+    }
+}

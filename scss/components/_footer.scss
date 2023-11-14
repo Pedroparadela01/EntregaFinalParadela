@@ -1,0 +1,31 @@
+footer {
+    margin-top: 10px;
+    h2{text-align: center;}
+    .casa-inicio {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+          a {
+             img {
+                width: 25px;
+                height: 25px;}
+             }
+    }
+
+    .redes-flex {
+        @include flex2(flex,center);
+        div {
+            a {
+                .redes-css {
+                    color:$color-redes;
+                    padding: 5px;
+                    &:hover {
+                        color:nth($colores,4);
+                    }
+                }
+            }
+
+        
+        }
+    }
+}

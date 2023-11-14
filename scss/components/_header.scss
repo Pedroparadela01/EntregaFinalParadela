@@ -1,0 +1,21 @@
+header {
+    background-color: rgb(57, 101, 226);
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+
+    img {
+        width: 150px;
+        height: 75px;
+        padding: 15px;
+    }
+
+    nav {
+        ul {
+            border-bottom: solid rgb(251, 127, 1) 5px;
+            border-top: solid rgb(251, 127, 1) 5px;
+            padding: 8px;
+            @include flex(flex,row,space-evenly,center);
+        }
+    }
+}
