@@ -6,7 +6,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: 350px;
     gap: 10px;
-    border: nth($colores,4) solid 5px;
+    border: nth($colores, 4) solid 5px;
     padding: 10px;
 
     .galeria1 {
@@ -80,21 +80,89 @@
         .cartas {
             margin: 10px;
             background-color: rgb(57, 101, 226);
-            border: 5px solid nth($colores,4);
+            border: 5px solid nth($colores, 4);
 
             .card-body {
                 h5 {
                     padding: 5px;
-                    color: nth($colores,2);
-                    background-color: nth($colores,3);
+                    color: nth($colores, 2);
+                    background-color: nth($colores, 3);
                     text-align: center;
                 }
 
                 .btn {
                     @include flex2(flex, center);
+
                 }
 
 
+            }
+
+        }
+    }
+}
+
+/*------Sucursal Central------*/
+.seccion {
+    div {
+        @include flex2(flex, center);
+
+        iframe {
+            padding: 15px;
+
+        }
+
+    }
+}
+
+.seccion {
+    div {
+        @include flex2(flex, center);
+
+        .btn {
+            margin-bottom: 15px;
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
+/*------Contacto------*/
+
+.foto-contacto {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.seccion {
+    border: 5px solid nth($colores, 4);
+    .formulario-contacto {
+        
+        div {
+            @include flex2(flex, center);
+            flex-wrap: wrap;
+            padding: 20px;
+
+            label {
+                flex-wrap: wrap;
+                font-size: 20px;
+                color: nth($colores , 2);
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+
+        .contacto-botones {
+            input {
+                color: nth($colores , 2);
+                background-color: nth($colores, 4);
+                border: 2px solid rgb(255, 94, 1);
+                margin: 20px;
+                padding: 10px;
             }
 
         }

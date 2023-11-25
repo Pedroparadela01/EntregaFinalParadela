@@ -1,31 +1,132 @@
 footer {
     margin-top: 10px;
-    h2{text-align: center;}
+
+    form {
+        height: 80px;
+        background-color: nth($colores, 4);
+        
+
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            label{color: nth($colores,2);
+            font-size: 30px;
+            padding: 15px;
+            }
+
+            input{
+                height: 40px;
+                width: 300px;
+            }
+        }
+    }
+
+
     .casa-inicio {
         position: fixed;
         bottom: 20px;
         right: 20px;
-          a {
-             img {
+
+        a {
+            img {
                 width: 25px;
-                height: 25px;}
-             }
+                height: 25px;
+            }
+        }
     }
 
-    .redes-flex {
-        @include flex2(flex,center);
-        div {
+    .grid-footer {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: 250px;
+        gap: 10px;
+        padding: 10px;
+
+        .footer1 {
+            h3 {
+                background-color: nth($colores, 3);
+                color: nth($colores, 2);
+                text-align: center;
+            }
+
             a {
-                .redes-css {
-                    color:$color-redes;
-                    padding: 5px;
-                    &:hover {
-                        color:nth($colores,4);
-                    }
+                padding-left: 10px;
+            }
+
+            .redes-css {
+                display: flex;
+                color: $color-redes;
+                padding: 5px;
+                transition: 1s linear;
+
+                &:hover {
+
+                    color: nth($colores, 4);
                 }
             }
 
-        
+            p {
+                padding-left: 10px;
+                color: nth($colores, 2);
+            }
+        }
+
+        .footer2 {
+            h3 {
+                background-color: nth($colores, 3);
+                color: nth($colores, 2);
+                text-align: center
+            }
+
+            .redes-flex {
+                @include flex2(flex, center);
+
+                div {
+                    a {
+                        .redes-css {
+                            color: $color-redes;
+                            padding: 5px;
+                            transition: 1s linear;
+
+                            &:hover {
+
+                                color: nth($colores, 4);
+                            }
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        .footer3 {
+            h3 {
+                background-color: nth($colores, 3);
+                color: nth($colores, 2);
+                text-align: center;
+            }
+
+            .redes-css {
+                color: $color-redes;
+                padding: 5px;
+                transition: 1s linear;
+
+                &:hover {
+
+                    color: nth($colores, 4);
+                }
+            }
+
+            p {
+                padding-left: 10px;
+                color: nth($colores, 2);
+            }
         }
     }
 }

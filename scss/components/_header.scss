@@ -1,4 +1,5 @@
 header {
+    
     background-color: rgb(57, 101, 226);
     position: sticky;
     top: 0px;
@@ -11,11 +12,12 @@ header {
     }
 
     nav {
-        ul {
+        ul {list-style: none;
             border-bottom: solid rgb(251, 127, 1) 5px;
             border-top: solid rgb(251, 127, 1) 5px;
             padding: 8px;
-            @include flex(flex,row,space-evenly,center);
+            @include flex(flex, row, space-evenly, center);
+            a{text-decoration: none;}
         }
     }
 }

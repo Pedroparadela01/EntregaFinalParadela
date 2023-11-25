@@ -1,26 +1,29 @@
 body {
-    background-color: nth($colores,1);
+    background-color: nth($colores, 1);
 }
 
 h1 {
-    color:nth($colores,2);
-    background-color: nth($colores,3);
+    color: nth($colores, 2);
+    background-color: nth($colores, 3);
     padding-left: 10px;
+    transition: 0.5s linear;
 
     &:hover {
-        background-color: rgb(255, 94, 1);
+        background-color: nth($colores, 4);
     }
 }
 
 h2 {
-    color: nth($colores,2);
-    background-color:nth($colores,3);
+    color: nth($colores, 2);
+    background-color: nth($colores, 3);
     padding-left: 10px;
+    transition: 0.5s linear;
 
     &:hover {
-        background-color: rgb(255, 94, 1);
+        background-color: nth($colores, 4);
     }
 }
+
 
 
 
@@ -32,25 +35,44 @@ h2 {
     padding: 14px 28px;
     cursor: pointer;
     border-radius: 5px;
-    background-color:nth($colores,4);
-    border: 2px solid #ff9800;
-    &:hover {background-color: rgb(255, 94, 1);}
+    background-color: nth($colores, 4);
+    border: 2px solid  rgb(255, 94, 1); 
+    @include flex2(flex, center);
+    transition: 1s linear;
+
+
+    &:hover {
+        background-color: rgb(255, 94, 1);
+        border-color: nth($colores, 4);
+
+
+    }
+
     &:active {
         border-color: rgb(255, 94, 1);
-        background-color: nth($colores,4)}
-}
-
-.seccion {
-    border:nth($colores,4) solid 5px;
-    margin: 10px 0 10px 0;
-    background-color: rgb(57, 101, 226);
-    p {
-        padding: 5px;
-        background-color: rgb(57, 101, 226);
-        color: nth($colores,2);
+        background-color: nth($colores, 4)
     }
 }
 
-a:link{color: nth($colores,2);}
+.seccion {
+    border: nth($colores, 4) solid 5px;
+    margin: 10px 0 10px 0;
+    background-color: rgb(57, 101, 226);
 
-a:visited{color:nth($colores,2);}
+    p {
+        padding: 5px;
+        background-color: rgb(57, 101, 226);
+        color: nth($colores, 2);
+    }
+}
+
+a:link {
+    color: nth($colores, 2);
+}
+
+a:visited {
+    color: nth($colores, 2);
+}
+
+iframe{
+    @include flex2(flex, center);}
